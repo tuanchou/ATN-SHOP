@@ -31,7 +31,7 @@ app.set('view engine', 'hbs');
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
-    console.log("Server is listening on Port 5000");
+    console.log("Server is listening on Port 3000");
 })
 
 app.use('/employee', employeeController);
