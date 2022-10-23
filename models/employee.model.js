@@ -14,6 +14,10 @@ var employeeSchema = new mongoose.Schema({
     },
     city: {
         type: String
+    },
+    birthday:{
+        type: Date,
+        format: 'DD.MM.YYYY'
     }
 })
 

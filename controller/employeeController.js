@@ -24,6 +24,7 @@ function insertRecord(req, res) {
     employee.email = req.body.email;
     employee.city = req.body.city;
     employee.mobile = req.body.mobile;
+    employee.birthday = req.body.birthday;
 
     employee.save((err, doc) => {
         if (!err) {

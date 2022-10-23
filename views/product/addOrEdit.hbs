@@ -1,0 +1,36 @@
+<h3>{{viewTitle}}</h3>
+<form action="/product" method="POST" autocomplete="off" enctype="multipart/form-data">
+    <input type="hidden" name="_id" value="{{product._id}}">
+    <div class="form-group">
+        <label>Product Name</label>
+        <input type="text" class="form-control" name="productName" value="{{product.productName}}"
+            placeholder="Product Name">
+        <div class="text-danger">
+            {{product.fullNameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input type="text" class="form-control" name="price" value="{{product.price}}" placeholder="Price">
+        <div class="text-danger">
+            {{product.emailError}}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group md-6">
+            <label>Image</label>
+            <input type="file" name="image" placeholder="Image" value="" class="form-control">
+
+        </div>
+        <div class="form-group md-6">
+            <label>Description</label>
+            <input type="text" name="des" placeholder="Description" value="{{product.des}}" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <a href="/product/list" class="btn btn-danger">
+            <i class="fa fa-list-alt"></i>View All
+        </a>
+    </div>
+</form>
