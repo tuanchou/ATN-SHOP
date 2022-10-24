@@ -30,14 +30,6 @@ app.engine('hbs', expressHandlebars({
 app.get('/', (req, res) => {
     res.render('home', { msg: 'This is home page'});
 });
-// app.get('/search:key', async (req, res) =>{
-//     let data = await employeeController.find({
-//         "$or":[
-//             {name: {$regex: req.params.key}}
-//         ]
-//     })
-//     res.send(data);
-// })
 
 app.set('view engine', 'hbs');
 

@@ -23,11 +23,13 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link active" href="/product/list"><i
-                                class="fas fa-window-maximize"></i><span>Product</span></a><a class="nav-link active"
-                            href="/employee/list"><i class="fas fa-window-maximize"></i><span>Employee</span></a><a
-                            class="nav-link active" href="blank.html"><i class="fas fa-window-maximize"></i><span>Blank
-                                Page</span></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/"><i class="fas fa-window-maximize"></i><span>Home</span></a>
+                        <a class="nav-link active" href="/product/list"><i
+                                class="fas fa-window-maximize"></i><span>Product</span></a>
+                        <a class="nav-link active" href="/employee/list"><i
+                                class="fas fa-window-maximize"></i><span>Employee</span></a>
+                    </li>
                 </ul>
                 <div class="text-center d-none d-md-inline"></div>
             </div>
@@ -38,14 +40,14 @@
                     <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3"
                             id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
                         <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div class="input-group"><input class="bg-light form-control border-0 small" id="myInput" onkeyup="myFunction()" type="text"
-                                    placeholder="Search for ..."><button class="btn btn-primary py-0" type="button" href="/search:key"><i
+                            <div class="input-group"><input class="bg-light form-control border-0 small" id="myInput"
+                                    onkeyup="myFunction()" type="text" placeholder="Search for ..."><button
+                                    class="btn btn-primary py-0" type="button" href="/search:key"><i
                                         class="fas fa-search"></i></button></div>
                         </form>
                         <ul class="navbar-nav flex-nowrap ms-auto">
                             <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link"
-                                    aria-expanded="false" data-bs-toggle="dropdown" ><i
-                                        class="fas fa-search"></i></a>
+                                    aria-expanded="false" data-bs-toggle="dropdown"><i class="fas fa-search"></i></a>
                                 <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in"
                                     aria-labelledby="searchDropdown">
                                     <form class="me-auto navbar-search w-100">
@@ -79,7 +81,8 @@
                 </nav>
             </div>
             <div class="row h-100 ">
-                <div style="background-color:rgb(255, 255, 255);padding:20px; right:5px; font-size: 18px;margin-top:-30px">
+                <div
+                    style="background-color:rgb(255, 255, 255);padding:20px; right:5px; font-size: 18px;margin-top:-30px">
                     {{{body}}}
                 </div>
             </div>
@@ -97,26 +100,26 @@
 </div>
 <script>
     function myFunction() {
-    // Declare variables
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("toyTable");
-    tr = table.getElementsByTagName("tr");
-  
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("toyTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
         }
-      }
     }
-  }
 </script>
 
 </html>
